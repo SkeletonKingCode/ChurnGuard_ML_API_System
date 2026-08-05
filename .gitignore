@@ -3,5 +3,9 @@ data/raw
 data/processed
 data/source
 
+#Report and figures can be regenerated
+docs/reports/figures
+docs/reports/EDA_REPORT.md
+
 #?
 .DS_Store
