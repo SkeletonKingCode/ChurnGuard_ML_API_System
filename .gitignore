@@ -1,0 +1,7 @@
+# Data files
+data/raw
+data/processed
+data/source
+
+#?
+.DS_Store
