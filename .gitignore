@@ -4,8 +4,7 @@ data/processed
 data/source
 
 #Report and figures can be regenerated
-docs/reports/figures
-docs/reports/EDA_REPORT.md
+docs/reports/
 
 # Pipelines will be regenerated
 *.joblib
