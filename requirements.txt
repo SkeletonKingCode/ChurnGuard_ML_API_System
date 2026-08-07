@@ -4,4 +4,8 @@ matplotlib
 seaborn
 scikit-learn
 joblib
-xgboost # Needs OpenMP runtime 
+xgboost # Needs OpenMP runtime
+fastapi
+uvicorn
+pydantic
+httpx 

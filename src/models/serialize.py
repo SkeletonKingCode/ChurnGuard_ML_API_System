@@ -243,8 +243,16 @@ def predict_raw(raw_df: pd.DataFrame, version: str = "latest") -> pd.DataFrame:
     else:
         total_charges_median = 1397.475
 
+    # Clean binary string columns ("Yes"/"No"/"Male"/"Female") -> 1/0
+    binary_map = {"Yes": 1, "No": 0, "Male": 1, "Female": 0}
+    binary_cols = ["PaperlessBilling", "Dependents", "Partner", "PhoneService", "Gender"]
+    raw_df_clean = raw_df.copy()
+    for col in binary_cols:
+        if col in raw_df_clean.columns:
+            raw_df_clean[col] = raw_df_clean[col].map(lambda x: binary_map.get(x, x))
+
     # 1. Feature Engineering
-    engineered_df = engineer_features(raw_df, total_charges_median=total_charges_median)
+    engineered_df = engineer_features(raw_df_clean, total_charges_median=total_charges_median)
 
     # Remove target column if present
     if "Churn" in engineered_df.columns:
