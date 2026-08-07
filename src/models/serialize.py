@@ -162,6 +162,7 @@ def load_model_artifacts(
     version: str = "latest",
     verify_checksum: bool = True,
     use_format: str = "joblib",
+    models_dir: Optional[Path] = None,
 ) -> Tuple[Any, Any, list, float, Dict[str, Any]]:
     """Load serialized model, preprocessor pipeline, feature names, threshold, and manifest.
     
@@ -169,11 +170,13 @@ def load_model_artifacts(
         version: Version string (e.g. 'v1.0.0' or 'latest')
         verify_checksum: Whether to verify SHA-256 checksums before loading
         use_format: 'joblib' or 'pickle'
+        models_dir: Base models directory path (defaults to MODELS_DIR)
         
     Returns:
         Tuple of (model, preprocessor, feature_names, optimal_threshold, manifest)
     """
-    target_dir = MODELS_DIR / version
+    base_dir = models_dir if models_dir is not None else MODELS_DIR
+    target_dir = base_dir / version
     if not target_dir.exists():
         raise FileNotFoundError(f"Artifact directory for version '{version}' does not exist at {target_dir}")
 

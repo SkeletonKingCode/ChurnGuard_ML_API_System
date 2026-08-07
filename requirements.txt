@@ -1,3 +1,4 @@
+# Production Runtime Dependencies
 numpy
 pandas
 matplotlib
@@ -8,4 +9,8 @@ xgboost # Needs OpenMP runtime
 fastapi
 uvicorn
 pydantic
-httpx 
+
+# Dev / Testing Dependencies (Installed separately for development/testing to keep production Docker images minimal)
+# pytest
+# pytest-cov
+# httpx 

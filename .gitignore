@@ -13,3 +13,6 @@ __pycache__/
 
 # OS metadata
 .DS_Store
+
+# Test coverage cache
+.coverage
