@@ -16,3 +16,6 @@ __pycache__/
 
 # Test coverage cache
 .coverage
+
+# Local environment file
+.env

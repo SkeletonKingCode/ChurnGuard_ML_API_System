@@ -1,0 +1,33 @@
+# Git files
+.git
+.gitignore
+.github
+
+# Virtual environment & caches
+.venv
+venv/
+ENV/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Testing & Coverage
+.pytest_cache/
+.coverage
+htmlcov/
+tests/
+
+# Large raw datasets (not needed in container runtime, only processed & models)
+data/raw/
+data/source/
+
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# Documentation scratch & IDE configs
+.idea/
+.vscode/
+.antigravity/
+.gemini/
