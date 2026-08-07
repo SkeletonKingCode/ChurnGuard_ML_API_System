@@ -9,5 +9,5 @@ docs/reports/
 # Pipelines will be regenerated
 *.joblib
 
-#?
+# OS metadata
 .DS_Store

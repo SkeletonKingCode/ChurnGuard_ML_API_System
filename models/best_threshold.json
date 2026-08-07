@@ -1,0 +1,13 @@
+{
+  "winner_search": "Grid Search",
+  "best_params": {
+    "C": 1.0,
+    "l1_ratio": 1.0,
+    "regularisation": "L1",
+    "solver": "liblinear"
+  },
+  "best_cv_roc_auc": 0.8449865586985629,
+  "optimal_threshold": 0.49,
+  "grid_search_best_cv_roc_auc": 0.8449865586985629,
+  "random_search_best_cv_roc_auc": 0.8449801809240581
+}
