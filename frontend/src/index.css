@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    @apply bg-slate-950 text-slate-100 antialiased min-h-screen selection:bg-indigo-500 selection:text-white;
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-image: 
+      radial-gradient(at 10% 10%, rgba(99, 102, 241, 0.15) 0px, transparent 50%),
+      radial-gradient(at 90% 90%, rgba(168, 85, 247, 0.12) 0px, transparent 50%),
+      radial-gradient(at 50% 50%, rgba(15, 23, 42, 0.95) 0px, transparent 100%);
+    background-attachment: fixed;
+  }
+}
+
+/* Glassmorphism Card Style */
+.glass-panel {
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.glass-card {
+  background: rgba(30, 41, 59, 0.5);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.glass-input {
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #f8fafc;
+  transition: all 0.2s ease-in-out;
+}
+
+.glass-input:focus {
+  border-color: #818cf8;
+  box-shadow: 0 0 15px rgba(99, 102, 241, 0.3);
+  outline: none;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(99, 102, 241, 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(99, 102, 241, 0.6);
+}
+
+/* Shimmer keyframe */
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.8; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.02); }
+}
+
+.animate-glow {
+  animation: pulseGlow 3s infinite ease-in-out;
+}
